@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Object Oriented Programming Part 4</title>
+            <script>
+                Date.prototype.getYesterday = function()
+                {
+                    var yesterday = new Date(new Date().setDate(new Date().getDate()-1));
+                    alert(yesterday);
+                }
+                var date = new Date();
+                
+            </script>
+        </head>
+        <body>
+            <input type="button" value="Get Yesterday" onclick="date.getYesterday()" />
+        </body>
+    </html>

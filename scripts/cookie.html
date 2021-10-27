@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Using Cookies</title>
+            <script>
+                function createCookie(name,value,days,path,domain,secure)
+                {
+                    if(days)
+                    {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days*24*60*60*1000));
+                        var expires = date.toGMTString();
+                    }
+                    else var expires = "";
+                    cookieString = name + "=" + escape(value);
+                    if (expires) cookieString += "; expires=" + expires;
+                    if (path) cookieString += "; path=" + escape(path);
+                    if (domain) cookieString += "; domain=" + escape(domain);
+                    if (secure) cookieString += "; secure";
+                    document.cookie = cookieString;
+                }
+                createCookie("name","dingdong",5);
+                createCookie("location","coding hell",5);
+                createCookie("time", "32nd of never",5)
+            </script>
+        </head>
+        <body>
+            <p>Check the cookies for this domain using your browser tools.</p>
+        </body>
+    </html>

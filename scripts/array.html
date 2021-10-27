@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Strings and Arrays</title>
+            <script>
+                function wrangleArray()
+                {
+                    var sentence = prompt("What would you like to say?");
+                    var newSentence = "";
+                    
+                    document.getElementById("div1").innerHTML = "<p>" + sentence + "</p>";
+                    alert(sentence);
+                    var words = sentence.split(" ");
+                    var message = words.splice(3,2,"powerful");
+                    alert('Removed words' + message);
+                    newSentence = words.join(" ");
+                    document.getElementById("div2").innerHTML = "<p>" + newSentence + "</p>";
+                }
+            </script>
+        </head>
+        <body>
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <script>wrangleArray();</script>
+        </body>
+    </html>

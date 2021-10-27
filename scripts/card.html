@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Object Oriented Programming Part 3</title>
+            <script>
+                function Card()
+                {
+                    this.suit = ["diamonds","hearts","clubs","spades"];
+                    this.face = ["1","2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"];
+                    this.showCard = function()
+                    {
+                        alert("Suit: " + this.suit[Math.floor(Math.random()*Math.floor(4))] + "\n" + "Face: " + this.face[Math.floor(Math.random()*Math.floor(14))]);
+                    }
+                }
+                var card = new Card();
+                
+            </script>
+        </head>
+        <body>
+            <input type="button" value="Show Card" onclick="card.showCard()" />
+        </body>
+    </html>

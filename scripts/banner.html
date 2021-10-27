@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>A Banner Rotator</title>
+        <script>
+            var banners = ["guns24.jpg","Rambo_Thumbs.jpg","StarWars_Thumbs.jpg"];
+            var links = ["http://www.google.com","http://www.pandora.com","http://www.slacker.com"];
+            var counter = 0;
+            function run()
+            {
+                setInterval(cycle,2000);
+            }
+            
+            function cycle()
+            {
+                counter = Math.floor(Math.random()*Math.floor(3));
+                if (counter == banners.length)
+                {
+                    counter = 0;
+                }
+                document.getElementById("banner").src = banners[counter];
+                document.getElementById("mylink").href = links[counter];
+            }
+        </script>
+        </head>
+        <body onload="run()">
+           <a id="mylink" href="http://www.google.com"><img alt="images" id="banner" src="guns24.jpg" /></a>
+        </body>
+    </html>
