@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Ajax Form Submission</title>
+            <script
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous">
+            </script>
+            <script>
+                $(document).ready(function(){
+                                function checkFields()
+                                {
+                                    return($("#name").attr("value")&&$("#email").attr("value"))
+                                }
+                                $("#form1").submit(function(){
+                                    if (checkFields()) {
+                                        $.post(
+                                            'clock.php',$("#form1").serialize(),
+                                            function(data) {
+                                                $("#div1").html(data);
+                                            }
+                                        )
+                                    } else alert("Please enter all info.");
+                                    return false;
+                                    
+                                })
+                                
+                        });
+            </script>
+        </head>
+        <body>
+            <form>
+            <input type="text" name="name" id="name" /><br/>
+            <input type="text" name="email" id="email" /><br/>
+            <input type="submit" name="submit" id="submit" value="Submit"/>
+            </form>
+            <div id="div1"></div>
+        </body>
+    </html>
