@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback</title>
+
+<link rel="stylesheet" href="CSS/oddduckcomm.css" type="text/css">
+
+<!--
+This page serves as a feedback form for ericmpastore.com. Later, it may also incorporate a Q & A section and/or release notes.
+-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180865562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180865562-1');
+</script>
+
+</head><!--end of head-->
+<body>
+<div id="body">
+    <header>
+	<h1>Eric M. Pastore - Contact</h1>
+    </header><!--end of header-->
+<div id="content">
+<div id="content1">
+
+<p>Use the feedback form to provide any comments you have on the site or my work. Feel free to also connect with me on social media by clicking the icons below. As I gather feedback and commentary, I will share the real gems on this page.</p>
+
+<div id="socialmedialinks">
+<ul>
+    <li><!--Facebook--> <a href="http://www.facebook.com/EricMPastore" target="_blank"><img src="media/black social media icons/48x48/facebook-48.png" /></a></li>
+    <li><!--Twitter--> <a href="http://www.twitter.com/EricMPastore" target="_blank"><img src="media/black social media icons/48x48/twitter-48.png" /></a></li>
+    <li><!--LinkedIn--> <a href="https://www.linkedin.com/pub/eric-m-pastore/19/5a8/a25" target="_blank"><img src="media/black social media icons/48x48/linkedin-48.png" /></a></li>
+    <li><!--Instagram--> <a href="http://instagram.com/ericmpastore/" target="_blank"><img src="media/black social media icons/48x48/instagram-48.png" /></a></li>
+    <li><!--Wordpress--> <a href="http://99bluescreens.wordpress.com" target="_blank"><img src="media/black social media icons/48x48/wordpress-48.png" /></a></li>
+</ul>
+</div><!--end of socialmedialinks-->
+</div><!--end of content1-->
+<div id="content2">
+<div id="feedback">
+<h2>Feedback Form</h2>
+
+<form id="feedback" method="post" action="sendmail.php">
+    <p>Tell Me What You Think. Really.</p>
+    <ul>
+	<li>Name: <br /><input type="text" name="name" id="name" />*</li>
+	<li>Email: <br /><input type="email" name="email" id="email" placeholder="me@example.com"/>*</li>
+	<li>Comments: <br /><input type="text" name="message" id="message" />*</li><br/>
+	<input type="submit" id="submit" value="Submit" />
+  <input type="reset" id="reset" value="Reset" />
+    </ul>
+</form>
+</div><!--end of feedback-->
+<div>
+  <?php include "manage.php"; echo "$display_block"; ?>
+</div><!--end of subscribe-->
+</div><!--end of content1 div-->
+</div><!--end of content div-->
+<footer>
+<a class="feedback" href="feedback.html">Provide Feedback</a>
+<a href="http://www.w3.org/html/logo/">
+<img class="logo"  src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+</a><!--end of HTML5 logo-->
+</footer><!--end of footer-->
+</div><!--end of body div-->
+<div id="masternav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="bio.html">Bio</a></li>
+	<li><a href="projects.html">Projects</a></li>
+	<li><a href="media.html">Media</a></li>
+	<li><a href="getinspired.html">Get Inspired</a></li>
+	<li><a class="current" href="feedback.html">Contact</a></li>
+</ul>
+</div><!--end of masternav div-->
+</body>
+</html>
